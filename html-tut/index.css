@@ -1,0 +1,12 @@
+.body-css {
+	background-color: black;
+	color: white;
+}
+
+#xmlhttprequest,
+#myDittoFetchBox,
+#myMorpheusFetchBox {
+	width: 100%;
+	height: 10vw;
+	overflow: scroll;
+}

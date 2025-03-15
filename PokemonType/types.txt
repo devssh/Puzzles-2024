@@ -1,0 +1,120 @@
+
+
+
+
+Analysis Chart
+
+Testing for logic skills, testing, error handling and design under Object Oriented and Function Programming.
+
+Pokemon Battles have a type game which is similar to Rock - Paper - Scissors
+
+Every Pokemon can have upto 2 types.
+Every Pokemon attack can have exactly one type.
+
+Rules of the Rock Paper Scissors
+1. If a pokemon uses an attack of any of it's 1-2 types it gets +50% damage, otherwise it deals +0% damage..
+Example 1: Mew 
+Mew is only Psychic type pokemon.
+-Any attack of Psychic type will get +50% damage from Mew.
+-Any Non Psychic attack by Mew will get +0% damage.
+
+Example 2: Scizor 
+Scizor is Bug + Steel type. Scizor is evolution of Scyther.
+- Any attack of Bug type will deal +50% damage from Scizor.
+- Any attack of Steel type will deal +50% damage when used by Scizor.
+- Any attack not of Bug or Steel type will deal +0% damage by Scizor.
+
+2. Given a type chart, the outcome of the Rock - Paper - Scissors is determined by the type chart.
+The outcomes of an attack based on type chart rock paper scissors is
+- Super Effective - deals double damage.
+- Not very effective - deals half damage.
+- Immune - deals no damage.
+- Normal - neither effective or ineffective - deals regular damage without increase or reduction - assume this to be default unless specified otherwise.
+
+Example 3: Scyther 
+Scyther is a Bug + Flying type Pokemon.
+Bug types are weak against Fire types.
+Flying types are weak against Fire types.
+Scyther takes damage logic
+- Fire attacks are 4x effective against Scyther.
+- Fire attacks deals super effective damage against scyther and double the damage twice.
+- Fire attacks deal 400% damage to Scyther.
+
+Example 4: Dragonite 
+Dragonite is a Dragon + Flying type Pokemon.
+- Dragon type is Super Effective against, Not very effective against, immune to none.
+- Flying type is Super Effective against, Not very effective against, immune to .
+- types are Super Effective against Dragon type.
+- types are Super Effective against Flying type.
+
+Dragonite takes damage logic
+X Pokemon attacks Dragonite.
+The pokemon has 4 moves
+-
+-
+-
+-
+
+If X uses Y type attack it will be super effective against dragonite. Calculation is:
+-
+
+If X uses Z type attack it will not be very effective against dragonite. Calculation is:
+-
+
+
+3. IV attribute stats also influence damage
+Apart from the type chart
+- the level difference between pokemon also affect the damage.
+- The Special attack stat(XATTACK) of attacker pokemon increases damage of attacks as a multiplier equation.
+- The Special defence stat(XDEFENCE) of defender pokemon decreases damage taken by attack as a multiplier equation.
+- The speed attribute state determines who attacks first, except for an attack named Quick attack.
+
+
+4. Provided Type chart
+------------- |Bug    | Flying | Steel  | Psychic | Fire  
+-----------------------------------------------------------
+- Bug         |       |        |        |         |
+-----------------------------------------------------------
+- Flying      |       |        |        |         |
+-----------------------------------------------------------
+- Steel       |       |        |        |         |
+-----------------------------------------------------------
+- Psychic     |       |        |        |         |
+-----------------------------------------------------------
+- Fire        |       |        |        |         |
+-----------------------------------------------------------
+
+
+5. After the code is done
+
+Test for bugs using hidden examples to test for code reliability 
+
+Expand type chart from 5 x 5 to 17 x 17 type chart.
+The 17 types are - 
+
+Example 5: Gyarados
+
+Example 6: ElectaBuzz
+
+Example 7: Typlosion
+
+Example 8: Geodude
+
+Example 9: Haunter
+
+Example 10: Aerodactyl
+
+Change the examples to keep the hidden test not easy to guess in advance.
+
+
+One of best pokemon deck of 6 pokemon is (due to IV stats + type advantages)
+- Khangaskhan
+- Gyarados
+- Lavitar
+- Golem
+- Electrode - self destruct
+- Rhydon
+
+
+
+

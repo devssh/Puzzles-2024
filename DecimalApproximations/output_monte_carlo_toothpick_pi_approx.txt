@@ -1,0 +1,33 @@
+PI approximation calculated
+3.1429570888925698
+
+
+PI approx method chosen
+
+Monte Carlo simulation - Toothpick
+
+- Make a rectangle with random n parallel lines, width 2*w apart.
+- Throw random m toothpicks of width w onto the rectange.
+- Count the number of toothpicks that touch the n parallel lines (excluding the border of rectange) and call this count k.
+- Pi = Total toothpicks (m) / (k) Number of toothpicks that touch the parallel lines.
+- Increase m and n to get better approx. m >> n. m must be greater than n for better approx.
+
+- Simulate it with numpy variables for toothpick location and angle. The box and toothpicks are imaginary. It is just a numpy matrix array.
+
+
+Calculated value of PI
+
+M = 10_000_000
+N = 100
+K = To be measured
+
+Expected value of PI
+3.14159
+
+Accurately calculated approximate to 2 decimal places.
+Result is low decimal precision because have to rely on np.sin and np.radians which use math.pi of less than 100 digits decimal accuracy.
+Result is also low decimal precision for using float instead of decimal with 100 decimal accuracy.
+Result for K measurement to calculate pi will be super-effective and super-fast if 
+actual toothpicks are thrown in real world and a camera is used to count intersections.
+
+

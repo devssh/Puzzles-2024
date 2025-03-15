@@ -1,0 +1,3 @@
+Lower limit is 10000000
+Done
+Maximum: 2185143829170100

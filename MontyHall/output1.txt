@@ -1,0 +1,180 @@
+Occurrences of configuration 1 are 3302. Percentage: 33.02% 
+Occurrences of configuration 2 are 3339. Percentage: 33.39% 
+Occurrences of configuration 3 are 3359. Percentage: 33.59% 
+The error variance is the deviation of these values from 33.33%.
+The sample size is 10000.
+Increasing sample size will reduce standard deviation.
+
+
+Monty hall postulates:
+If I select a door out of 3 and one of them has a reward. Should I switch doors and how will it affect probability?
+Given that after I select a door, I am given new information by opening one of the remaining two doors.
+Now I am given a choice - Stick to my selection or switch doors.
+
+Here is this program's decision making logic.
+When I'm given a choice - use the strategy - select one of the remaining two doors with 50-50 probability.
+Eenie meenie miney mo strategy.
+
+Now count the probability I win the prize. It should be 50%.
+
+
+And the results are:
+EenieMMM wins: 4975. Percentage: 49.75%
+EenieMMM lose: 5025. Percentage: 50.25%
+
+
+Now the strategy for Eenie Meenie Miney Mo are 50% as visible.
+
+Let's try out two new strategies.
+Instead of 50-50 on the two remaining doors we will
+
+1. Switch - Always switch the door strategy from the one initially chosen. And count the wins. And percent it for conditional probability.
+2. Stick - Always stick with the door initially chosen. And count the wins. And percent it for the conditional probability.
+
+
+And the results are:
+Stick with selection wins: 3368. Percentage: 33.68%
+Stick with selection lose: 6632. Percentage: 66.32%
+
+
+
+Switch to other door wins: 6662. Percentage: 66.62%
+Switch to other door lose: 3338. Percentage: 33.38%
+
+
+So why does this work? 
+Why is the win probability 66.66% for switch which is the best solution?
+And stick which has win probability 33.33% which is the worst solution?
+
+There are 3 approaches to explain this
+
+1. Counting down from N doors
+
+If there were 10 doors, I selected a door. That is 1/10 win probability and 9/10 lose probability.
+Out of the remaining 9 doors, 8 were opened. Now it is clear I might have to switch to the other door.
+
+
+
+
+
+2. If I picked a door out of 3, the lose probability is 2/3. If one door is opened of the remaining two. 
+The probability of the other door remaining unopened being the incorrect one is 1/3.
+This is using the negative/complementary probability(1-p) to give a more intuitive explanation.
+
+
+
+
+
+3. Using condition probability tables
+
+Let's say the reward location is random
+
+Door configuration probability
+
+Door 1 - 1/3 chance reward
+
+Door 2 - 1/3 chance reward
+
+Door 3 - 1/3 chance reward
+
+Now for Door 1 configuration(Door 1 has the reward) conditional probability
+
+Selection probability
+Door 1 - (1/3 * 1/3) chance reward = 1/9
+Door 2 - 0 chance reward
+Door 3 - 0 chance reward
+
+But if we factor in the one wrong door reveal into this where the person MUST open a wrong door.
+
+Now he has to open Door 2 or Door 3
+Door 2 - 1/2 chance to open
+Door 3 - 1/2 chance to open
+
+If opened Door 2 given Door 1 is reward
+Door 1 and Door 3 are unopened.
+The probability I selected Door 1 - 1/3
+The probability I selected Door 3 - 1/3
+
+If I switch -
+The probability I switched to Door 1 - 2/3
+The probability I switched to Door 3 - 2/3
+
+Reward probability for if I switched to other door
+Door 1 - 1/2 * 2/3 * 1/3 chance reward = 1/9
+Door 3 - 1/2 * 2/3 * 0 chance reward = 0
+
+Now I repeat for if opened Door 3 given Door 1 is reward
+
+Reward probability
+Door 1 - 1/2 * 2/3 * 1/3 chance reward = 1/9
+Door 3 - 1/2 * 2/3 * 0 chance reward = 0
+
+Now for summing up the cases 1/9 + 1/9 = 2/9 total probability for the case Door 1 configuration.
+
+Similarly repeating for Door 2 and 3 configuration = 2/9, 2/9
+
+Total probability = 2/9 + 2/9 + 2/9 = 6/9 = 2/3 = 66.66% winrate for switching doors.
+
+
+
+
+
+4. Obviously true by symmetry solution
+
+The Bayes ratios for the three doors move from
+
+1 : 1 : 1 to 1 : 2 : 0
+
+Thus switching is better.
+
+
+
+
+
+
+
+
+
+Here are some things that need clarity about the host, system, problem statement and reverse psychology that gives the wrong answer intuitively because the question has been phrased poorly(which is why Monty hall is a poorly phrased question and gives wrong intuitive answer)
+
+
+1. In real life, the conditional probability starts at 0 doors opened. It is not clear that the host MUST open one wrong door because it sounds like a figure of speech or matter of phrasing.
+If the host could choose 50-50 whether to open a door after knowing the selection of door I made, it would affect the probability and my intuition.
+
+
+
+2. If I added the conditional probability of reverse psychology combined with survival instincts/intuition in a zero-sum game
+The probability of winning for switch is 2/3
+The probability of winning for stick is 1/3
+
+Now assume before the final selection is made the reward can be swapped between the two doors.
+So there is 2/3 percent chance that the door for switch is rigged to fail.
+1/3 percent chance that door for stick is still rigged to fail.
+This is layer 1 double reverse psychology.
+
+For layer 2 - I expect the host to understand that I understand the rigging so he rigged again/deeper.
+There is an additional 1/2 * 1/3 = 1/6 percent chance door for switch is rigged to fail.
+There is an additional 1/2 * 2/3 = 2/6 percent chance door for stick is rigged to fail.
+
+Adding this to infinity we get 50-50 is optimal choice. 
+If there was only one time I could run the trial- it is better to choose randomly to switch or stick.
+Even if the trial has to run a million times - it is better to choose randomly to switch or stick if foul play is expected.
+Eenie meenie miney mo is the best option with 50% win/lose chance.
+In fact there is no guarantee of best option in case of foul play as trial results and counts will deviate significantly from expectations.
+50-50 chance here is the punishment probability to inflict maximum damage on the foul play going on over many trials which comes naturally coded in humans for survival.
+
+
+3. The clarity that the configuration and choices are truly random is not clear. 
+The condition of foul play is explained here.
+Foul play involves -
+a. Knowing the choice of initial selection(incentive).
+b. Knowing the location of reward(violation of independence/randomness of events).
+c. Having the choice to open 0 or more losing door(suggestion).
+d. Having incentive/want/desire to give/not give reward(violation of independence).
+
+
+The biggest problem with the Monty Hall problem is not about 66.66% for switch win probability instead of 50% winrate.
+The biggest problem with the Monty Hall problem is convincing people of true randomness and independence of effects outside external influence without factors like foul play, reverse psychology and zero sum games.
+
+
+

@@ -1,0 +1,81 @@
+
+.center-circle, .circle-1, .circle-2, .circle-3, .circle-4, .circle-5, .circle-6 {
+background-color: black;
+height: 300px;
+min-height: 300px;
+max-height: 300px;
+width: 300px;
+min-width: 300px;
+max-width: 300px;
+border-radius: 50%;  
+left: 720px;
+top: 480px;
+bottom: 0px;
+right: 0px;
+position: absolute;
+}
+
+/* 
+ * x, y = center = 720 + 60/2, 500 + 60/2 = 750, 530
+ * actual 748px, 528px;
+ * radius = 30
+ */
+
+.circle-1 {
+transform: matrix(0.333333, 0, 0, 0.333333, 180, -370);
+}
+
+.circle-2 {
+transform: matrix(0.333333, 0, 0, 0.333333, 380, -30);
+}
+
+.circle-3 {
+transform: matrix(0.333333, 0, 0, 0.333333, 180, 330);
+}
+
+.circle-4 {
+transform: matrix(0.333333, 0, 0, 0.333333, -220, 330);
+}
+
+.circle-5 {
+transform: matrix(0.333333, 0, 0, 0.333333, -420, -30);
+}
+
+.circle-6 {
+transform: matrix(0.333333, 0, 0, 0.333333, -220,-370);
+}
+
+.center {
+height: 1px;
+width: 1px;
+position: absolute;
+left: 870px;
+top: 530px;
+border-radius: 50%; 
+z-index: 103;
+background-color: white;
+}
+
+.line {
+height: 1px;
+width: 150px;
+position: absolute;
+left: 727px;
+top: 541px;
+background-color: red;
+transform: rotateZ(120deg);
+z-index: 100;
+}
+
+/*
+ * position-1 741 517 -60 degree
+ * position-2 748 528 0 degree
+ * position-3 741, 541 60 degree
+ * position-4 727 541 120 degree
+ * position-5 720 529 180 degree
+ * position-6 728 517 -120 degree
+ */
+
+
+
+
