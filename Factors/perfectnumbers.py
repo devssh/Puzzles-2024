@@ -50,12 +50,14 @@ if __name__ == "__main__":
     print(json.dumps(prime_factors(num), indent=4))
   
   for num in summation_perfect:
-    print(json.dumps(summation_of(num)))
+    print(json.dumps(summation_of(num), indent=4))
 
-  print(json.dumps(perfect_brute))
+  print(json.dumps(perfect_brute, indent=4))
 
-
-
+  #summation_of_7th = summation_of(131071)
+  #print(json.dumps(summation_of_7th, indent=4))
+  #print("it's never gonna factor that far without sieve")
+  #print(json.dumps(prime_factors(summation_of_7th["sum"]), indent=4))
 
 
 
