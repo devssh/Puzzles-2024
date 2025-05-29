@@ -52,7 +52,8 @@
     ],
     "sum": 8128
 }
-{"mersenne_prime": 3, "sum": 6.0}
-{"mersenne_prime": 7, "sum": 28.0}
-{"mersenne_prime": 31, "sum": 496.0}
-{"mersenne_prime": 127, "sum": 8128.0}
+{"mersenne_prime": 3, "sum": 6}
+{"mersenne_prime": 7, "sum": 28}
+{"mersenne_prime": 31, "sum": 496}
+{"mersenne_prime": 127, "sum": 8128}
+{"perfect_numbers": [6, 28, 496, 8128], "mersenne_number": [3, 7, 31, 127]}
